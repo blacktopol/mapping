@@ -1,19 +1,22 @@
 ---
-title: Adding turn lanes
+title: Додавання напрямків руху по смугах
 ---
 
-## What is a turn lane
+## Що таке напрямки руху по смугах
 
+Напрямки руху по смугах це розмітка яка показує дозволені на перехресті напрямки руху по смугах.
 A turn lane is an auxiliary lane demarcated on the road to specify directions to ongoing vehicles.
-Turn lanes serve two purposes:
- * Provide directional information to the ongoing vehicles and
- * Provide the lane information to be chosen for the vehicles changing their direction
+Напрямки руху по смугах призначені для:
+ * Інформування транспортних засобів які рухаються прямо та
+  Provide directional information to the ongoing vehicles and
+ * Інформування транспортних засобів що змінюють напрямок руху
+  Provide the lane information to be chosen for the vehicles changing their direction
 
-### Types of turn lanes
+### Варіанти позначення напрямків руху по смугах
 
-There are a total of 12 different turn lanes demarcated on the roads. They are:
+Існує загалом 12 різних варіантів позначення напрямків руху на дорогах
 
-Turn Lane | Representation
+Опис та тег OSM | Умовний знак
 --- | ---
 turn:lanes = left | ![left](https://cloud.githubusercontent.com/assets/8401827/13217928/1d2fc24e-d98c-11e5-9d20-c526fe6e7f01.jpg)
 turn:lanes = right | ![right](https://cloud.githubusercontent.com/assets/8401827/13217945/424f36e0-d98c-11e5-99e7-9d178f2529a1.jpg)
