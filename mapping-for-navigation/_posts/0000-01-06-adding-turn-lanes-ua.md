@@ -76,7 +76,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
   ![residential_road](https://cloud.githubusercontent.com/assets/369696/13223732/34cf7ffa-d98e-11e5-9a33-8f40f6498004.png)
 
-* Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Наприклад. `turn:lanes=left|left;through|through`. Більше прикладів можна знайти тут [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/Key:turn:lanes).
+* Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Наприклад. `turn:lanes=left|left;through|through`. Більше прикладів можна знайти тут [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/RU:Key:turn:lanes).
   ![oneway_turn:lanes_tagging](https://cloud.githubusercontent.com/assets/8401827/13252110/a6bdea8a-da5a-11e5-8c79-aa15c0c15f68.gif)
 
 * Для сегментів доріг, рух на яких здійснюється в обох напрямках, необхідно вказати `turn:lanes:forward=` (кількість смуг в напрямку що співпадає з напрямком осьової лінії) та `turn:lanes:backward=` (кількість смуг в напрямку протилежному напрямку осьової лінії).
@@ -93,16 +93,16 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 ## Напрямки руху по смугах та відношення
 
-[Відношення](http://wiki.openstreetmap.org/wiki/Relation) використовуються з різною метою – для позначення [заборони руху в певних напрямках](http://wiki.openstreetmap.org/wiki/Relation:restriction) або обʼєднання окремих шляхів в один [маршрут](http://wiki.openstreetmap.org/wiki/Relation:route).
+[Відношення](http://wiki.openstreetmap.org/wiki/Uk:Relation) використовуються з різною метою – для позначення [заборони руху в певних напрямках](http://wiki.openstreetmap.org/wiki/RU:Отношения_-_ограничения) або обʼєднання окремих шляхів в один [маршрут](http://wiki.openstreetmap.org/wiki/Uk:Relation:route).
 JOSM допомагає нам впоратися з ними. Але іноді ми стикаємося з неправильно позначеними відношеннями. JOSM повідомить про це під час завантаження змін. Ви можете [ігнорувати повідомлення рівня "Попередження"](https://github.com/mapbox/mapping/issues/153#issuecomment-185679507) (якщо ви тільки розділили дорогу та не редагували відношення вручну) але вам потрібно виправити всі помилки "Errors".
 
-## QA for turn lanes mapping
+## Контроль якості картографування напрямків руху по смугах.
 
-While mapping turn lanes, there are a lot of scenarios are encountered in [#153](https://github.com/mapbox/mapping/issues/153) and [#144](https://github.com/mapbox/mapping/issues/144) mapping repos. All these scenarios are drafted in one place for validation purposes.
+Багато окремих випадків картографування напрямків руху по смугах наведено у [#153](https://github.com/mapbox/mapping/issues/153) та [#144](https://github.com/mapbox/mapping/issues/144). Всі ці сценарії наведені в одному місці з метою перевірки.
 
-## Different scenarios we came across while mapping
+## Окремі випадки що трапляються під час картографування 
 
-### 1. Parking lanes
+### 1. Паркувальні смуги
 
 In the U.S., when parallel parking spaces are marked, they are marked in one of [three ways](http://mutcd.fhwa.dot.gov/htm/2009/part3/fig3b_21_longdesc.htm):
 
