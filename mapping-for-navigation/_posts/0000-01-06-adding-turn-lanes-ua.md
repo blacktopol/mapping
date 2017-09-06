@@ -36,14 +36,17 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 ### Підготовка до картографування напрямків руху по смугах у JOSM
 
-Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. Оберіть `Preferences > Map Settings`
+Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. 
+
+Оберіть `Preferences > Map Settings`
 
 Додайте стиль для відображення смуг руху.
-* *`Map Paint Styles > Lane and road attributes`*
+* **`Map Paint Styles > Lane and road attributes`**
 
   ![lane_and_road_attributes](https://cloud.githubusercontent.com/assets/13744156/13218788/c55fab96-d991-11e5-89b2-b281986d704e.gif)
 
-* *`Tagging Presets > lane attributes`*
+Додайте набір тегів для смуг руху.
+* **`Tagging Presets > lane attributes`**
 
   ![tagging_presets](https://cloud.githubusercontent.com/assets/13744156/13218902/ad15c902-d992-11e5-872b-1bde24f27f5b.gif)
 
