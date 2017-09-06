@@ -12,7 +12,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
  * Інформування транспортних засобів що змінюють напрямок руху
   Provide the lane information to be chosen for the vehicles changing their direction
 
-### Варіанти позначення напрямків руху по смугах
+## Варіанти позначення напрямків руху по смугах
 
 Існує загалом 12 різних варіантів позначення напрямків руху на дорогах
 
@@ -34,11 +34,11 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
   ![](http://pdd.ua/r/r/EEB7A996-D8DC-40FC-87EA-01F3E115BC7C/m_1.18_4.jpg)
   _Позначення напрямків руху на проїзній частині_ - © [pdd.ua](http://pdd.ua/ua/34/1.18/)
 
-### Підготовка до картографування напрямків руху по смугах у JOSM
+## Підготовка до картографування напрямків руху по смугах у JOSM
 
 Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. 
 
-1. Налаштування відображення карти. 
+1. ### Налаштування відображення карти. 
 
 Оберіть **`Preferences > Map Settings`**
 
@@ -56,7 +56,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
   1.3. Filter out non-road features with inverse filter: `boundary: | leisure: | landuse: | waterway: | amenity: | natural: | building:`
 
-2. Встановлення плагінів
+2. ### Встановлення плагінів
 
   2.1. Knife-tool. 
   
