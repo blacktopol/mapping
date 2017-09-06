@@ -34,9 +34,11 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
   ![](http://pdd.ua/r/r/EEB7A996-D8DC-40FC-87EA-01F3E115BC7C/m_1.18_4.jpg)
   _Позначення напрямків руху на проїзній частині_ - © [pdd.ua](http://pdd.ua/ua/34/1.18/)
 
-### Pre-requirements for mapping a turn lane in JOSM
+### Підготовка до картографування напрямків руху по смугах у JOSM
 
-Before mapping turn lanes activate the following preferences in JOSM to visualize the mapped turn lanes: `preferences > Map Settings`
+Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. Оберіть `Preferences > Map Settings`
+
+Додайте стиль для відображення смуг руху.
 * *`Map Paint Styles > Lane and road attributes`*
 
   ![lane_and_road_attributes](https://cloud.githubusercontent.com/assets/13744156/13218788/c55fab96-d991-11e5-89b2-b281986d704e.gif)
