@@ -76,27 +76,25 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
   ![residential_road](https://cloud.githubusercontent.com/assets/369696/13223732/34cf7ffa-d98e-11e5-9a33-8f40f6498004.png)
 
-* Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Eg. `turn:lanes=left|left;through|through`. Check [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/Key:turn:lanes) for reference.
-
+* Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Наприклад. `turn:lanes=left|left;through|through`. Більше прикладів можна знайти тут [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/Key:turn:lanes).
   ![oneway_turn:lanes_tagging](https://cloud.githubusercontent.com/assets/8401827/13252110/a6bdea8a-da5a-11e5-8c79-aa15c0c15f68.gif)
 
-* For bi-directional segments, use `turn:lanes:backward=` and `turn:lanes:forward=` to specify turn lanes in each direction.
+* Для сегментів доріг, рух на яких здійснюється в обох напрямках, необхідно вказати `turn:lanes:forward=` (кількість смуг в напрямку що співпадає з напрямком осьової лінії) та `turn:lanes:backward=` (кількість смуг в напрямку протилежному напрямку осьової лінії).
 
   ![bidirectional_tagging](https://cloud.githubusercontent.com/assets/13744156/13219545/acd78f62-d996-11e5-85eb-3e05a7b79d3b.gif)
 
-* Verify correct tagging using the `Lane attributes` style
+* Перевірте правильність заповнення тегів використовуючи стиль `Lane attributes`.
 
   ![lane_attributes](https://cloud.githubusercontent.com/assets/8401827/13251884/ddcbdd54-da58-11e5-86ae-c4a2918c9577.gif)
 
-* The simplest way to add turn lanes is by using **[turnlanes-tagging plugin](https://www.mapbox.com/blog/turnlanes-tagging/)**
+* Найпростіший шлях для цього викоростання плагіну **[turnlanes-tagging](https://www.mapbox.com/blog/turnlanes-tagging/)**
 
 ![turnlenes](https://cloud.githubusercontent.com/assets/8401827/17246767/d086ef48-55ab-11e6-8bce-46c434cb9005.gif)
 
-### `turn:lanes` and relations
+## Напрямки руху по смугах та відношення
 
-We use [relations](http://wiki.openstreetmap.org/wiki/Relation) for different purpose – for indicating [turn restriction](http://wiki.openstreetmap.org/wiki/Relation:restriction) or collect separate ways into solid [route](http://wiki.openstreetmap.org/wiki/Relation:route).
-​
-JOSM help us to handle them. But sometimes we are faced with not properly denoted relations. JOSM will inform about it while uploading our changes. You may [ignore messages of level "Warnings"](https://github.com/mapbox/mapping/issues/153#issuecomment-185679507) (if you only split ways and didn't edit relations manually) but you have to fix all "Errors".
+[Відношення](http://wiki.openstreetmap.org/wiki/Relation) використовуються з різною метою – для позначення [заборони руху в певних напрямках](http://wiki.openstreetmap.org/wiki/Relation:restriction) або обʼєднання окремих шляхів в один [маршрут](http://wiki.openstreetmap.org/wiki/Relation:route).
+JOSM допомагає нам впоратися з ними. Але іноді ми стикаємося з неправильно позначеними відношеннями. JOSM повідомить про це під час завантаження змін. Ви можете [ігнорувати повідомлення рівня "Попередження"](https://github.com/mapbox/mapping/issues/153#issuecomment-185679507) (якщо ви тільки розділили дорогу та не редагували відношення вручну) але вам потрібно виправити всі помилки "Errors".
 
 ## QA for turn lanes mapping
 
