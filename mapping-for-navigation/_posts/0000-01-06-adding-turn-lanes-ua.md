@@ -68,15 +68,15 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 ## Картографування напрямків руху по смугах
 
-* Check all roads in the imagery for turn lanes at junction points
+* Визначте на знімку перехрестя з позначеними напрямками руху по смугах.
 
   ![roads_markings](https://cloud.githubusercontent.com/assets/126868/11710074/b58b52e4-9f42-11e5-971a-000a699a0b6d.png)
 
-* Split the road into segments based on the total number of lanes for the segment. The easiest way for splitting the road is by using [Knife_tool](https://gist.github.com/jothirnadh/a10daeaef1498537ea56f0a65f7fdbc2)
+* Поділіть лінію дороги на сегменти виходячи с загальної кількості смуг на сегменті. Найпростішім шляхом для цього є використання [Knife_tool](https://gist.github.com/jothirnadh/a10daeaef1498537ea56f0a65f7fdbc2)
 
   ![residential_road](https://cloud.githubusercontent.com/assets/369696/13223732/34cf7ffa-d98e-11e5-9a33-8f40f6498004.png)
 
-* For each road segment tag the turn lanes based on the road markings in the direction of the way. Eg. `turn:lanes=left|left;through|through`. Check [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/Key:turn:lanes) for reference.
+* Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Eg. `turn:lanes=left|left;through|through`. Check [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/Key:turn:lanes) for reference.
 
   ![oneway_turn:lanes_tagging](https://cloud.githubusercontent.com/assets/8401827/13252110/a6bdea8a-da5a-11e5-8c79-aa15c0c15f68.gif)
 
