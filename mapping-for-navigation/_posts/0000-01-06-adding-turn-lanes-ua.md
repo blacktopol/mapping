@@ -38,26 +38,26 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. 
 
-1. Налаштування відображення карти
-Оберіть `Preferences > Map Settings`
+1. Налаштування відображення карти. 
+Оберіть **`Preferences > Map Settings`**
 
-  1.1 Додайте стиль для відображення смуг руху.
+  1.1. Додайте стиль для відображення смуг руху.
   **`Map Paint Styles > Lane and road attributes`**
 
   ![lane_and_road_attributes](https://cloud.githubusercontent.com/assets/13744156/13218788/c55fab96-d991-11e5-89b2-b281986d704e.gif)
 
-  1.2 Додайте набір тегів для смуг руху.
-  **`Tagging Presets > lane attributes`**
+  1.2. Додайте набір тегів для смуг руху.
+  **`Tagging Presets > Lane attributes`**
 
   ![tagging_presets](https://cloud.githubusercontent.com/assets/13744156/13218902/ad15c902-d992-11e5-872b-1bde24f27f5b.gif)
 
-  1.3 Filter out non-road features with inverse filter: `boundary: | leisure: | landuse: | waterway: | amenity: | natural: | building:`
+  1.3. Filter out non-road features with inverse filter: `boundary: | leisure: | landuse: | waterway: | amenity: | natural: | building:`
 
 2. Встановлення плагінів
 
-  2.1 Knife-tool: 
+  2.1. Knife-tool. 
   Входить до складу плагіну auto-tools. [Інструкція з встановлення](https://gist.github.com/jothirnadh/a10daeaef1498537ea56f0a65f7fdbc2)
-  2.2 turnlanes-tagging: 
+  2.2. turnlanes-tagging.
   Оберіть `Preferences > Plugins > turnlanes-tagging`
 
 ### Mapping a turn lane
