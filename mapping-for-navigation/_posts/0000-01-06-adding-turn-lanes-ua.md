@@ -18,6 +18,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 Опис та тег OSM | Умовний знак
 --- | ---
+Рух лише ліворуч
 turn:lanes = left | ![left](https://cloud.githubusercontent.com/assets/8401827/13217928/1d2fc24e-d98c-11e5-9d20-c526fe6e7f01.jpg)
 turn:lanes = right | ![right](https://cloud.githubusercontent.com/assets/8401827/13217945/424f36e0-d98c-11e5-99e7-9d178f2529a1.jpg)
 turn:lanes = through | ![through](https://cloud.githubusercontent.com/assets/8401827/13214156/f885d4b4-d973-11e5-9fb7-e9ecb70a932b.jpg)
