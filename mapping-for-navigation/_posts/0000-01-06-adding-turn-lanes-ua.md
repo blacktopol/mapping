@@ -38,7 +38,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
 Перед початком картографування напрямків руху по смугах потрібно зробити наступні налаштування у JOSM. 
 
-1. ### Налаштування відображення карти. 
+### 1. Налаштування відображення карти. 
 
 Оберіть **`Preferences > Map Settings`**
 
@@ -56,7 +56,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 
   1.3. Filter out non-road features with inverse filter: `boundary: | leisure: | landuse: | waterway: | amenity: | natural: | building:`
 
-2. ### Встановлення плагінів
+### 2. Встановлення плагінів
 
   2.1. Knife-tool. 
   
@@ -64,9 +64,9 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
   
   2.2. turnlanes-tagging.
   
-  Оберіть `Preferences > Plugins > turnlanes-tagging`
+  Оберіть **`Preferences > Plugins > turnlanes-tagging`**
 
-### Mapping a turn lane
+## Картографування напрямків руху по смугах
 
 * Check all roads in the imagery for turn lanes at junction points
 
