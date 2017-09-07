@@ -215,7 +215,7 @@ JOSM допомагає нам впоратися з ними. Але іноді
 
 ![screen shot 2016-03-14 at 2 25 28 pm](https://cloud.githubusercontent.com/assets/8401827/13776502/84944b6c-ead0-11e5-92fa-0bb2951760ef.png)
 
-### 14. The order of the directions and valid combinations of values
+### 14. Дозволені комбінації значень
 
   #### Використання `none` 
   
