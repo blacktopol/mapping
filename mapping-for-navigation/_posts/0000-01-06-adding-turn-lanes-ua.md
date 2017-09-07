@@ -217,7 +217,7 @@ JOSM допомагає нам впоратися з ними. Але іноді
 
 ### 14. The order of the directions and valid combinations of values
 
-  - Використання `none` 
+  #### Використання `none` 
   
   `none` є дозволеним значенния але **не** у поєднанні з іншими
   
@@ -237,7 +237,7 @@ turn:lanes=none|through;slight_right
 transit:lanes=continue|new_on_right
 ```  
 
-- using `*right` | `*left` values  
+#### using `*right` | `*left` values  
 
   ✅ `turn:lanes=left|none|none` or `turn:lanes=||right` or `turn:lanes=merge_to_right||` or `turn:lanes=left|left;through|none|slight_right|right|right`- 👍  
 
