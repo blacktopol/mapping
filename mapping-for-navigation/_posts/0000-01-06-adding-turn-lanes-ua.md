@@ -237,21 +237,21 @@ turn:lanes=none|through;slight_right
 transit:lanes=continue|new_on_right
 ```  
 
-#### using `*right` | `*left` values  
+#### Використання значень `*right` та `*left`
 
-  ✅ `turn:lanes=left|none|none` or `turn:lanes=||right` or `turn:lanes=merge_to_right||` or `turn:lanes=left|left;through|none|slight_right|right|right`- 👍  
+  ✅ `turn:lanes=left|none|none` або `turn:lanes=||right` або `turn:lanes=merge_to_right||` або `turn:lanes=left|left;through|none|slight_right|right|right`- 👍  
 
-  ❎  `turn:lanes=|right|left|` or `turn:lanes=none|right|left|through` or `turn:lanes=none|left|none`- 👎  lanes that go in one direction should not cross with each other
+  ❎  `turn:lanes=|right|left|` або `turn:lanes=none|right|left|through` або `turn:lanes=none|left|none`- 👎  смуги що ідуть в одному напрямку не можуть перетинатися одна з одною
 
-- using `reverse` value
+#### Використання значення `reverse`
  
- - `reverse` (u-turn) have to be on the leftmost lane for right-hand traffic or on the rightmost lane for right-hand
+Значення `reverse` (розворот) може використовуватися лише для крайньої лівої смуги у випадку правосторонього руху або для крайньої лівої смуги у випадку лівосторонього руху.
 
 ### 15.
 
 _to be continued …_
 
-### Further reading: 
-* [Mapping turn lanes: OSM wiki](http://wiki.openstreetmap.org/wiki/Key:turn)
+### Матеріали для подальшого вивчення 
+* [Mapping turn lanes: OSM wiki](http://wiki.openstreetmap.org/wiki/RU:Key:turn)
 * [Mapping turn lanes in OpenStreetMap by Andrey Golovin](https://www.mapbox.com/blog/turn-lanes-mapping/)
 * Diary post by @Andygol : [Mapping turn lanes in OpenStreetMap](http://www.openstreetmap.org/user/andygol/diary/35489#)
