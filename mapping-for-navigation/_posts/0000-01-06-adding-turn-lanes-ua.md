@@ -5,12 +5,11 @@ title: Додавання напрямків руху по смугах
 ## Що таке напрямки руху по смугах
 
 Напрямки руху по смугах це розмітка яка показує дозволені на перехресті напрямки руху по смугах.
-A turn lane is an auxiliary lane demarcated on the road to specify directions to ongoing vehicles.
+
 Напрямки руху по смугах призначені для:
  * Інформування транспортних засобів які рухаються прямо та
-  Provide directional information to the ongoing vehicles and
+  
  * Інформування транспортних засобів що змінюють напрямок руху
-  Provide the lane information to be chosen for the vehicles changing their direction
 
 ## Варіанти позначення напрямків руху по смугах
 
@@ -153,7 +152,7 @@ JOSM допомагає нам впоратися з ними. Але іноді
 
 ![dualcarriageway](https://cloud.githubusercontent.com/assets/8401827/13393542/117b59aa-df08-11e5-8fd3-21a931531f84.png)
 
-### 8. Велосипедні доріжки та узбічча Bicycle lanes and road shoulders
+### 8. Велосипедні доріжки та узбічча
 
 Велосипедні доріжки та узбічча не враховуються в числі смуг. 
 
@@ -172,36 +171,37 @@ JOSM допомагає нам впоратися з ними. Але іноді
 * Можна використовувати додатковий шар `Strava global-heat cycle` для первірки того чи є смуга велосипедною доріжкою.
 `tms[16]:http://globalheat.strava.com/tiles/cycling/color3/{zoom}/{x}/{y}.png`
 
-### 9. Lane marked as a separate way
+### 9. Смуги зображені як окрема дорога
 
-Do not add turn lanes in these cases where the only turn lane is already a mapped as a separate way.
+Напрямок руху не потрібно вказувати якщо смуга зображена як окрема дорога
 
   ![lane_as_separate_way](https://cloud.githubusercontent.com/assets/13744156/13173428/6694c468-d723-11e5-96be-b95502b9f58a.png)
 
-### 10. Bidirectional turn lanes
+### 10. Двонаправлені смуги
 
-These are the lanes marked with symbol representing both directions at a time.
+На знімку зображена смуга з умовним знаком що дозволяю рух в обох напрямках одночасно.
+
+Для позначення таких смуг використовується тег `turn:lanes:both_ways=*`
 
   ![turn:lanes:both_ways](https://cloud.githubusercontent.com/assets/8401827/12642951/0162ff9c-c5df-11e5-8a14-a41f263ae086.png)
 
-Tag used for such lanes are `turn:lanes:both_ways=*`
-
-Yellow lines on both sides of a lane also gives an indication of `turn:lanes:both_ways=*`
+Жовті лінії з обох боків смуги також вказують на двонаправлену смугу `turn:lanes:both_ways=*`
 
 ![screen shot 2016-05-16 at 4 12 49 pm](https://cloud.githubusercontent.com/assets/1933377/15287587/8dd24396-1b81-11e6-8527-b84814804175.png)
 
 ![screen shot 2016-05-16 at 4 13 00 pm](https://cloud.githubusercontent.com/assets/1933377/15287591/9165c50a-1b81-11e6-9521-93cea4b7be16.png)
-### 11. Mapillary Plugin to verify turn lanes
 
-The imagery at some places is not very clear and at-times the turn-lanes are covered by cars. In situations like these `Mapillary plugin` can be used. If there is Mapillary imagery coverage in that area, they can used to verify the presence of turn-lanes.
+### 11. Плагін Mapillary для перевірки напрямків руху за смугами
 
-**Name of the plugin:** Mapillary
+Ксмічні знімки в деяких місцях не дуже чітки а місцями смуги закриті автомобілями. В цих випадках можна використовувати `Mapillary plugin`. Якщо в даному місці є знімок Mapillary його можна використовувати для визначення напрямків руху за смугами спираючись на дорожні знаки на цьому знімку.
 
   ![turnlanes_mapillary](https://cloud.githubusercontent.com/assets/4470913/12884912/6b405d1e-ce87-11e5-8d0f-cd8a8a8b3dfd.gif)
 
-### 12. Lanes with restricted access
+### 12. Острівці безпеки
 
-These are the areas on streets which are restricted for vehicular traffic.
+Це місця на проїжджій частині на які заборонений вʼїзд автотраспорту.
+
+У всіх випадках наведених нижче острівці безпеки не враховуються в число смуг.
 
 ![screen shot 2016-03-15 at 3 36 36 pm](https://cloud.githubusercontent.com/assets/8401827/13776503/84c34002-ead0-11e5-911d-0581fe9173b7.png)
 
@@ -209,27 +209,27 @@ These are the areas on streets which are restricted for vehicular traffic.
 
 ![screen shot 2016-03-14 at 4 46 29 pm](https://cloud.githubusercontent.com/assets/8401827/13776505/84e71888-ead0-11e5-9135-553c11d99d12.png)
 
-In the above cases the areas with markings on the roads are not considered as a lane
+### 13. Смуги для розвороту
 
-### 13. Reverse direction turn lanes
-
-These are the lanes specifically categorized to take U-turn or reverse-turn.
+Смуги призначені виключно для розвороту позначаються спеціальним тегом. У випадку наведеному на малюнку це виглядає наступним чином `turn:lane:reverse|||`. 
 
 ![screen shot 2016-03-14 at 2 25 28 pm](https://cloud.githubusercontent.com/assets/8401827/13776502/84944b6c-ead0-11e5-92fa-0bb2951760ef.png)
 
 ### 14. The order of the directions and valid combinations of values
 
-  - `none` itself is valid value but **not** in conjunction with other  
+  - Використання `none` 
   
-  - ✅ `turn:lanes=none|right` is equal to `turn:lanes=|right` - we use `none` for "_better readability_"
-
-  - 👎  `turn:lanes=left||none|merge_to_right` - this combination of values is valid but there is mixing `none` and `||` (empty) - this is not good choice.  
-
-  - 👍  `turn:lanes=left|none|none|merge_to_right` or `turn:lanes=left|||merge_to_right`  
+  `none` є дозволеним значенния але **не** у поєднанні з іншими
   
-  - ❎ `turn:lanes=none|none|none` or `turn:lanes=||` - in this case `turn:lanes=*` tag is redundant, just specify `lanes=3` or real number of lanes  
+  ✅ `turn:lanes=none|right` еквівалентно `turn:lanes=|right` - ми використовуємо `none` для "_кращої читабельності_"
 
-  - ❎ `turn:lanes=none|none;slight_right` - isn't valid combination - "_there are no turn indications_"  on the rightmost lane. Instead, must be used (based on https://github.com/mapbox/mapping/issues/180#issuecomment-225574666)
+  👎  `turn:lanes=left||none|merge_to_right` - ця комбінація значень дозволена, але змішування `none` та `||` (пусто) не є гарним прикладом 
+
+  👍  Використовуйте `turn:lanes=left|none|none|merge_to_right` або `turn:lanes=left|||merge_to_right`  
+  
+  ❎ `turn:lanes=none|none|none` or `turn:lanes=||` - В цьому випадку тег `turn:lanes` є надлишковим. Потрібно лише вказати загальну кількість смуг `lanes=3` 
+
+  ❎ `turn:lanes=none|none;slight_right` - це не дозволена комбінація - "_втрачене позначення повороту_"  на крайній правій смузі. Замість цього потрібно використовувати (базуючись на https://github.com/mapbox/mapping/issues/180#issuecomment-225574666)
 
 ```
 lanes=2
@@ -239,9 +239,9 @@ transit:lanes=continue|new_on_right
 
 - using `*right` | `*left` values  
 
-  - ✅ `turn:lanes=left|none|none` or `turn:lanes=||right` or `turn:lanes=merge_to_right||` or `turn:lanes=left|left;through|none|slight_right|right|right`- 👍  
+  ✅ `turn:lanes=left|none|none` or `turn:lanes=||right` or `turn:lanes=merge_to_right||` or `turn:lanes=left|left;through|none|slight_right|right|right`- 👍  
 
-  - ❎  `turn:lanes=|right|left|` or `turn:lanes=none|right|left|through` or `turn:lanes=none|left|none`- 👎  lanes that go in one direction should not cross with each other
+  ❎  `turn:lanes=|right|left|` or `turn:lanes=none|right|left|through` or `turn:lanes=none|left|none`- 👎  lanes that go in one direction should not cross with each other
 
 - using `reverse` value
  
