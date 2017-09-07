@@ -79,7 +79,7 @@ A turn lane is an auxiliary lane demarcated on the road to specify directions to
 * Для кожного сегменту вкажіть тег `turn:lanes` спираючись на дорожню розмітку з урахуванням напрямку лінії дороги. Наприклад. `turn:lanes=left|left;through|through`. Більше прикладів можна знайти тут [OSM turn:lanes](http://wiki.openstreetmap.org/wiki/RU:Key:turn:lanes).
   ![oneway_turn:lanes_tagging](https://cloud.githubusercontent.com/assets/8401827/13252110/a6bdea8a-da5a-11e5-8c79-aa15c0c15f68.gif)
 
-* Для сегментів доріг, рух на яких здійснюється в обох напрямках, необхідно вказати `turn:lanes:forward=` (кількість смуг в напрямку що співпадає з напрямком осьової лінії) та `turn:lanes:backward=` (кількість смуг в напрямку протилежному напрямку осьової лінії).
+* Для сегментів доріг, рух на яких здійснюється в обох напрямках, необхідно вказати `turn:lanes:forward=` (кількість смуг в напрямку що співпадає з напрямком лінії дороги) та `turn:lanes:backward=` (кількість смуг в напрямку протилежному напрямку  лінії дороги).
 
   ![bidirectional_tagging](https://cloud.githubusercontent.com/assets/13744156/13219545/acd78f62-d996-11e5-85eb-3e05a7b79d3b.gif)
 
@@ -104,46 +104,45 @@ JOSM допомагає нам впоратися з ними. Але іноді
 
 ### 1. Паркувальні смуги
 
-In the U.S., when parallel parking spaces are marked, they are marked in one of [three ways](http://mutcd.fhwa.dot.gov/htm/2009/part3/fig3b_21_longdesc.htm):
+У сполучених Штатах паркувальні місця позначаються одним з [трьох способів] (http://mutcd.fhwa.dot.gov/htm/2009/part3/fig3b_21_longdesc.htm):
 
   ![parking_lanes](https://cloud.githubusercontent.com/assets/8401827/13172245/326a7bb6-d71d-11e5-8617-a2516f75144b.png)
 
-Here’s an example of the box marking style:
+Приклад позначення паркувальних місць
 
   [![boxes](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/J.S._Shingler_Bldg_%28East_face%29%2C_McLendon_St%2C_Ashburn.JPG/320px-J.S._Shingler_Bldg_%28East_face%29%2C_McLendon_St%2C_Ashburn.JPG)](https://commons.wikimedia.org/wiki/File:J.S._Shingler_Bldg_%28East_face%29,_McLendon_St,_Ashburn.JPG)
 
-### 2. Counting number of turn lanes
+### 2. Підрахунок кількості смуг.Counting number of turn lanes
 
-If there are no clear cut demarcations on the road and yet cars are parked on either sides of the road, consider them as drive lanes. Case below:
+У випадку якщо на дорозі відсутня чітка розмітка паркувальних місць та є припарковані автомобілі, смуги на яких вони припарковані враховуються в загальну кількість.
+Див. приклад на малюнку нижче:
 
  ![number_of_lanes](https://cloud.githubusercontent.com/assets/8401827/13142482/5b26d0a0-d663-11e5-90cd-4a65d75e7248.png)
 
-### 3. Starting a turn lane
+### 3. Визначення початку відрізку лінії дороги на якому позначаються напрямки руху за смугами.
 
- Turn lanes should begin exactly as per the marking in the imagery, not before or after.
+Поділ лінії дороги потрібно здійснювати у точці де фактично починається розмітка (як наведено на малюнку нижче) і ні в якому разі не раніше.
 
   ![turn:lanes_start](https://cloud.githubusercontent.com/assets/8401827/13110125/0fe83ad0-d5a4-11e5-82ff-00245d0ba043.png)
 
-### 4. Ending a turn lane
+### 4. Визначення закінчення відрізку лінії дороги на якому позначаються напрямки руху за смугами.
 
-Turn lanes should terminate at the first highway junction after the start of the turn lane.
+Відрізок лінії дороги на якому позначаються напрямки руху по смугах повинен закінчуватися на першому перехресті від його початку
 
   ![turn:lanes_end](https://cloud.githubusercontent.com/assets/8401827/13143057/4ff2b3c6-d667-11e5-8069-b028fabf7587.png)
 
-### 5. Turn lane forward
+### 5. Смуги в напрямку що співпадає з намрямком лінії дороги.
 
-In case of bi-directional ways, the key [turn:lanes:forward=*](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right) describes only the turning indications on the lanes in the same direction as the osm-way; while adding this we must view the road in the direction to the osm-way(**on the direction where the osm-way arrow is pointing**).
+У випадку дороги рух на якій здійснюється в обох напрямках, ключ [turn:lanes:forward=*] (http://wiki.openstreetmap.org/wiki/Uk:Forward_%26_backward,_left_%26_right) описує лише смуги у напрямку що співпадає з напрямком лінії дороги. Після додавання напрямків руху ви повинні побачини позначки у напрямку лінії дороги (**напрямок що вказується стрілкою на кінці лінії дороги**).
 
   ![turn:lanes:forward](https://cloud.githubusercontent.com/assets/8401827/13175904/c5c922fc-d733-11e5-91b1-c0f9e5181fda.gif)
 
-### 6. Turn lane backward
+### 6. Смуги в напрямку протилежному намрямку лінії дороги.
 
-In case of bi-directional ways, the key [turn:lanes:backward=*](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right) describes only the turning indications on the lanes in the opposite direction as the osm-way; while adding this we must view the road in the oppoiste direction to the osm-way(**opposite to direction where the osm-way arrow is pointing**).
+У випадку дороги рух на якій здійснюється в обох напрямках, ключ [turn:lanes:backward=*] (http://wiki.openstreetmap.org/wiki/Uk:Forward_%26_backward,_left_%26_right) описує лише смуги у напрямку протилежному напрямку лінії дороги. Після додавання напрямків руху ви повинні побачини позначки у напрямку протилежному лінії дороги (**напрямок протилежний стрілці на кінці лінії дороги**).
 
   ![turn:lanes:backward](https://cloud.githubusercontent.com/assets/13744156/13172709/859957c4-d71f-11e5-8cd9-ea154ad5d2e8.gif)
 
-  *Adding a `turn:lanes:backward` tag*
-  
 ### 7. Adding dual carriageways:
 
 When finding roads mapped as single carriageway while the imagery shows clear separation between roads, split the road where the physical separation starts and add dual carriageways.
