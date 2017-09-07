@@ -139,41 +139,37 @@ JOSM допомагає нам впоратися з ними. Але іноді
 
 ### 6. Смуги в напрямку протилежному намрямку лінії дороги.
 
-У випадку дороги рух на якій здійснюється в обох напрямках, ключ [turn:lanes:backward=*](http://wiki.openstreetmap.org/wiki/Uk:Forward_%26_backward,_left_%26_right) описує лише смуги у напрямку протилежному напрямку лінії дороги. Після додавання напрямків руху ви повинні побачини позначки у напрямку протилежному лінії дороги (**напрямок протилежний стрілці на кінці лінії дороги**).
+У випадку дороги рух на якій здійснюється в обох напрямках, ключ [turn:lanes:backward=*](http://wiki.openstreetmap.org/wiki/Uk:Forward_%26_backward,_left_%26_right) описує лише смуги у напрямку протилежному напрямку лінії дороги. Після додавання напрямків руху ви повинні побачини позначки у напрямку протилежному напрямку лінії дороги (**напрямок протилежний стрілці на кінці лінії дороги**).
 
   ![turn:lanes:backward](https://cloud.githubusercontent.com/assets/13744156/13172709/859957c4-d71f-11e5-8cd9-ea154ad5d2e8.gif)
 
-### 7. Adding dual carriageways:
+### 7. Дороги з розділювальною смугою.
 
-When finding roads mapped as single carriageway while the imagery shows clear separation between roads, split the road where the physical separation starts and add dual carriageways.
+У вападку коли ви бачити дорогу позначену я суцільна проїжджа части (одна лінія), але на знімку чітко видно розділювальну смугу потрібно поділити лінію дороги на дві окремі лінії (проїжджі частини). Після поділу необхідно додати до кожної лінії тег `turn:lanes` та вказати кількість смуг.
+
+Ділити на окремі проїжджі частини потрібно коли:
+ - ви читко бачити розділювальну смугу між проїжджими частинами;
+ - **дорога не має відношень (relation)**.
 
 ![dualcarriageway](https://cloud.githubusercontent.com/assets/8401827/13393542/117b59aa-df08-11e5-8fd3-21a931531f84.png)
 
+### 8. Велосипедні доріжки та узбічча Bicycle lanes and road shoulders
 
-**When to add dual carriageway?**
-- Add Dual-carriage when 
- - you see physical separation betweens roads
- - **no relation is attached to the way.**
-- Add `turn:lanes` tag to both the ways.
+Велосипедні доріжки та узбічча не враховуються в числі смуг. 
 
-
-### 8. Bicycle lanes and road shoulders
-
-Road shoulders and bicycle lanes are ignored from the lane count. Both these roads are `lanes=2`
+* Обидві дороги мають по дві смуги `lanes=2`
 
   ![bicycle+shoulders](https://cloud.githubusercontent.com/assets/126868/11715007/628dd90a-9f64-11e5-9e22-58614d2afbf6.png)
 
+* Дорога має три смуги `lanes=3`. Дві велосипедні доріжки не враховуються.
+
   ![bicycle_lanes](https://cloud.githubusercontent.com/assets/13744156/13172922/adc69f08-d720-11e5-8600-7a606d2e9bae.png)
 
-  *lanes=3 for the above example, ignoring the two cycle ways*
-
-* Ignore bicycle lanes even though they are in the middle;example below:
+* Не враховуються також велосипедні доріжки які проходять всередині дороги
 
   ![xyz2](https://cloud.githubusercontent.com/assets/8401827/13495220/79a65aca-e16f-11e5-83e7-24d3e4f53ad0.png)
 
-  *The middle way is also a bicycle lane which is not counted while adding the `lanes` tag*
-
-* Additionally, `Strava global-heat cycle` layer can used to verify if a particular lane is a cycle-way.
+* Можна використовувати додатковий шар `Strava global-heat cycle` для первірки того чи є смуга велосипедною доріжкою.
 `tms[16]:http://globalheat.strava.com/tiles/cycling/color3/{zoom}/{x}/{y}.png`
 
 ### 9. Lane marked as a separate way
